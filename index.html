@@ -14,6 +14,7 @@
 
 <body>
 	<!-- partial:index.partial.html -->
+	<button onclick="topFunction()" id="backtotop" title="Go to top"><i class="fal fa-arrow-to-top"></i></button>
 	<div class="container">
 		<div class="mt-auto mb-6">
 			<div class="row">
@@ -24,15 +25,32 @@
 						With this API you can't get informations for Killer, survivors; Perks and more.
 						You can use query in URL if you search for a specific response.
 					</p>
-					<div class="alert alert-success" role="success">
-						<i class="fal fa-info-square"></i> Quick info: <br>
-						<span>You can change language with the query <b>lang</b>
-						<br>French and English is actually available so you can use <pre>?lang=en or ?lang=fr</pre>
-					</div>
+					
+					<h6><b>JUMP TO</b></h6>
+					<a class="btn btn-success" href="#perks">GET Perks</a>
+					<a class="btn btn-success" href="#killers">GET Killers</a>
+					<a class="btn btn-success" href="#survivors">GET Survivors</a>
+
+					<br><hr><br>
+
+					<h3>Changing language</h3>
+					<p>
+						You can change language with the query <b>lang</b>
+						<br>French and English is actually available so you can use <pre><code class="jquery">English = API_URL + "?lang=en" 
+ French = API_URL + "?lang=fr"</code></pre>
+					</p>
+
+					<br><hr><br>
+
+					<h3>Images</h3>
+					<p>
+						All images is hosted on <a href="https://github.com/dearvoodoo/dbd" target="_blank">my github</a>
+						<br>You can simply use link direcly in the API, or you can use perk_tag and name_tag to build image link.
+
 					<hr>
-					<h3>Get perks</h3>
+					<h3 id="perks">Get perks</h3>
 					<p>Get list of perks or specific information with query.</p>
-					<pre><code class="language-php">GET https://dbd-api.herokuapp.com/perks</code></pre>
+					<pre><code class="language-http">curl -X GET 'https://dbd-api.herokuapp.com/perks'</code></pre>
 					<h5>Query</h5>
 					<table class="table table-striped table-dark">
 						<thead>
@@ -109,9 +127,9 @@
 ]
 				</code></pre>
 				<hr>
-					<h3>Get killers</h3>
+					<h3 id="killers">Get killers</h3>
 					<p>Get list of killers or specific information with query.</p>
-					<pre><code class="language-php">GET https://dbd-api.herokuapp.com/killers</code></pre>
+					<pre><code class="language-http">curl -X GET 'https://dbd-api.herokuapp.com/killers'</code></pre>
 					<h5>Query</h5>
 					<table class="table table-striped table-dark">
 						<thead>
@@ -235,9 +253,9 @@
 ]
 				</code></pre>
 				<hr>
-					<h3>Get survivors</h3>
+					<h3 id="survivors">Get survivors</h3>
 					<p>Get list of survivors or specific information with query.</p>
-					<pre><code class="language-php">GET https://dbd-api.herokuapp.com/survivors</code></pre>
+					<pre><code class="language-http">curl -X GET 'https://dbd-api.herokuapp.com/survivors'</code></pre>
 					<h5>Query</h5>
 					<table class="table table-striped table-dark">
 						<thead>
