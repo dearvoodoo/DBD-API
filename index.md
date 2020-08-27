@@ -27,16 +27,16 @@ Get perks
 GET https://dbd-api.herokuapp.com/perks
 ```
 Query:  
-| Champ       | Type    | Description                                             |
-|:------------|:--------|:--------------------------------------------------------|
-| id          | Object  | Query String parameter to specifiy id filters.          |
-| role        | String  | Query String parameter to specifiy role filters.        |
-| name        | String  | Query String parameter to specifiy name filters.        |
-| name_tag    | String  | Query String parameter to specifiy name_tag filters.    |
-| perk_name   | String  | Query String parameter to specifiy perk_name filters.   |
-| teach_level | Number  | Query String parameter to specifiy teach_level filters. |
-| is_ptb      | Boolean | Query String parameter to specifiy is_ptb filters.      |
-| lang        | String  | Query String parameter to specifiy lang filters.        |
+Champ | Type | Description 
+------|------|-------------
+id | Object  | Query String parameter to specifiy id filters.
+role | String  | Query String parameter to specifiy role filters.
+name | String  | Query String parameter to specifiy name filters.
+name_tag | String  | Query String parameter to specifiy name_tag filters.
+perk_name | String  | Query String parameter to specifiy perk_name filters.
+teach_level | Number  | Query String parameter to specifiy teach_level filters.
+is_ptb | Boolean | Query String parameter to specifiy is_ptb filters.
+lang | String  | Query String parameter to specifiy lang filters.
 
 Result:  
 ```json
