@@ -22,11 +22,11 @@ This is a normal paragraph following a header. GitHub is a code hosting platform
 > When something is important enough, you do it even if the odds are not in your favor.
 
 ## [](#perks)Perks
-Get perks
+Get perks  
 ```php
 GET https://dbd-api.herokuapp.com/perks
 ```
-Query:
+Query:  
 | Champ       | Type    | Description                                             |
 |:------------|:--------|:--------------------------------------------------------|
 | id          | Object  | Query String parameter to specifiy id filters.          |
@@ -38,7 +38,7 @@ Query:
 | is_ptb      | Boolean | Query String parameter to specifiy is_ptb filters.      |
 | lang        | String  | Query String parameter to specifiy lang filters.        |
 
-Result:
+Result:  
 ```json
 [
   {
@@ -72,11 +72,11 @@ Result:
 ```
 
 ## [](#killers)Killers
-Get killers
+Get killers  
 ```php
 GET https://dbd-api.herokuapp.com/killers
 ```
-Query:
+Query:  
 | Champ         | Type    | Description                                               |
 |:--------------|:--------|:----------------------------------------------------------|
 | id            | Object  | Query String parameter to specifiy id filters.            |
@@ -100,7 +100,7 @@ Query:
 | is_ptb        | Boolean | Query String parameter to specifiy is_ptb filters.        |
 | lang          | String  | Query String parameter to specifiy lang filters.          |
 
-Result:
+Result:  
 ```json
 [
   {
@@ -137,11 +137,11 @@ Result:
 ```
 
 ## [](#survivors)Survivors
-Get survivors
+Get survivors  
 ```php
 GET https://dbd-api.herokuapp.com/survivors
 ```
-Query:
+Query:  
 | Champ         | Type    | Description                                               |
 |:--------------|:--------|:----------------------------------------------------------|
 | id            | Object  | Query String parameter to specifiy id filters.            |
@@ -159,7 +159,7 @@ Query:
 | is_ptb        | Boolean | Query String parameter to specifiy is_ptb filters.        |
 | lang          | String  | Query String parameter to specifiy lang filters.          |
 
-Result:
+Result:  
 ```json
 [
   {
