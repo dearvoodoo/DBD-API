@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>DBD API Documentation</title>
+	<link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://pro.fontawesome.com/releases/v5.14.0/css/all.css'>
+	<link rel='stylesheet'
+		href='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/atom-one-dark.min.css'>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+	<div class="container">
+		<div class="mt-auto mb-6">
+			<div class="row">
+				<div class="col">
+					<!-- Main content jumpotron center here -->
+					<h3>Get perks</h3>
+					<p>Get list of perks or specific information with query.</p>
+					<pre><code class="language-php">GET https://dbd-api.herokuapp.com/perks</code></pre>
+					<h5>Query</h5>
+					<table class="table table-striped table-dark">
+						<thead>
+							<tr>
+								<th scope="col">Champ</th>
+								<th scope="col">Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">id</th>
+								<td>Object</td>
+							</tr>
+							<tr>
+								<th scope="row">role</th>
+								<td>String</td>
+							</tr>
+							<tr>
+								<th scope="row">name</th>
+								<td>String</td>
+							</tr>
+							<tr>
+								<th scope="row">name_tag</th>
+								<td>String</td>
+							</tr>
+							<tr>
+								<th scope="row">perk_name</th>
+								<td>String</td>
+							</tr>
+							<tr>
+								<th scope="row">teach_level</th>
+								<td>Number</td>
+							</tr>
+							<tr>
+								<th scope="row">is_ptb</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">lang</th>
+								<td>String</td>
+							</tr>
+						</tbody>
+					</table>
+					<h5>Result</h5>
+					<pre><code class="language-json text-left">
+[
+	{
+		"_id": "5f46d9afa3777022ec626077",
+		"role": "Survivor",
+		"name": "Meg Thomas",
+		"name_tag": "MT",
+		"perk_name": "Quick & Quiet",
+		"perk_tag": "QuickQuiet",
+		"description": "You do not make as much noise as others when quickly vaulting over obstacles or hiding in Lockers. The vault and hide actions' noise detection and audio range is reduced by 100 %. Quick & Quiet can only be triggered once every 30/25/20 seconds.",
+		"teach_level": 30,
+		"is_ptb": false,
+		"lang": "en",
+		"icon": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Perks/QuickQuiet.png"
+	},
+	{
+		"_id": "5f46d9afa3777022ec626078",
+		"role": "Survivor",
+		"name": "Meg Thomas",
+		"name_tag": "MT",
+		"perk_name": "Sprint Burst",
+		"perk_tag": "SprintBurst",
+		"description": "When starting to run, break into a sprint at 150 % of your normal running speed for a maximum of 3 seconds. Causes the Exhausted Status Effect for 60/50/40 seconds. Sprint Burst cannot be used while Exhausted. You do not recover from Exhaustion while running.",
+		"teach_level": 35,
+		"is_ptb": false,
+		"lang": "en",
+		"icon": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Perks/SprintBurst.png"
+	},
+	...
+]
+				</code></pre>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- partial -->
+	<script src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'></script>
+	<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+	<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+	<script src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js'></script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>

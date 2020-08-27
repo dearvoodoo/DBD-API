@@ -1,4 +1,212 @@
-body { 
-  color: rgb(157, 165, 180);
-  background-color: rgb(49, 54, 63);
+:root {
+    --text-primary: #fff;
+    --text-secondary: rgba(255,255,255,.7);
+    --text-hover: rgba(255,255,255,.75);
+  	--text-disabled: rgba(255,255,255,.25);
+	--text-link: #ff3248;
+
+  	--bg-primary: #1b0f23;
+    --bg-secondary: #22152c;
+    --bg-light: #7228e2;
+    --bg-floating: #100b13;
+    --border-color: #ff3248;
+  	--shadow-color: rgba(255,0,0,.25);
+}
+
+body {
+  -webkit-transition: background 250ms ease;
+  transition: background 250ms ease;
+  background-color: var(--bg-floating);
+  color: var(--text-secondary);
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5 { color: var(--text-primary); }
+
+a { color: var(--text-link); font-weight: normal; }
+
+a:hover { color: var(--text-link); font-weight: bold; text-decoration: none; }
+
+p { olor: var(--text-secondary); }
+
+hr {
+	margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid var(--bg-light);
+}
+
+hr.full { 
+  border: 0; 
+  height: 2px; 
+  background-image: -webkit-linear-gradient(left, var(--bg-primary), var(--bg-light), var(--bg-primary));
+}
+
+.bg-dark {
+  background: var(--bg-primary)!important;
+}
+
+/* Couleur boutons social */
+.btn-twitter {
+    color: #1da1f2;
+    background-color: var(--bg-light);
+    border-color: var(--bg-light);
+}
+
+.btn-twitter:hover {
+    color: var(--text-primary);
+    background-color: #1da1f2;
+    border-color: #1da1f2;
+}
+
+.btn-twitch {
+    color: #6441a5;
+    background-color: var(--bg-light);
+    border-color: var(--bg-light);
+}
+
+.btn-twitch:hover {
+    color: var(--text-primary);
+    background-color: #6441a5;
+    border-color: #6441a5;
+}
+
+.btn-instagram {
+    color: #e1306c;
+    background-color: var(--bg-light);
+    border-color: var(--bg-light);
+}
+
+.btn-instagram:hover {
+    color: var(--text-primary);
+    background-color: #e1306c;
+    border-color: #e1306c;
+}
+
+.btn-discord {
+    color: #7289da;
+    background-color: var(--bg-light);
+    border-color: var(--bg-light);
+}
+
+.btn-discord:hover {
+    color: var(--text-primary);
+    background-color: #7289da;
+    border-color: #7289da;
+}
+
+.btn-merch {
+  color: #34da9a;
+  background-color: var(--bg-light);
+  border-color: var(--bg-light);
+}
+
+.btn-merch:hover {
+  color: var(--text-primary);
+  background-color: #34da9a;
+  border-color: #34da9a;
+}
+
+.btn-donation {
+  color: #f3e51d;
+  background-color: var(--bg-light);
+  border-color: var(--bg-light);
+}
+
+.btn-donation:hover {
+  color: var(--text-primary);
+  background-color: #f3e51d;
+  border-color: #f3e51d;
+}
+
+.btn-wishlist {
+  color: #973bec;
+  background-color: var(--bg-light);
+  border-color: var(--bg-light);
+}
+
+.btn-wishlist:hover {
+  color: var(--text-primary);
+  background-color: #973bec;
+  border-color: #973bec;
+}
+
+/* Couleurs des menus */
+.form-control {
+  	color: #c3bace;
+  	background-color: var(--bg-secondary);
+  	border: none;
+    border-radius: 0;
+    outline: 0;
+	border-radius: 0;
+	filter: drop-shadow(0 3px 7px rgba(14, 8, 18, .44));
+}
+
+.form-control:focus {
+  	color: #c3bace;
+  	background-color: var(--bg-secondary);
+  	box-shadow: none;
+}
+
+label {
+  color: var(--text-primary);
+}
+
+.form-control::placeholder {
+  	color: #c3bace;
+  	opacity: 1;
+}
+
+select {
+  	-webkit-appearance: none;
+  	-moz-appearance: none;
+  	-ms-appearance: none;
+  	appearance: none;
+  	outline: 0;
+  	box-shadow: none;
+  	border: 0 !important;
+	border-radius: 0 !important;
+  	background: var(--bg-secondary);
+  	background-image: none;
+}
+
+select::-ms-expand {
+  	display: none;
+}
+
+.select {
+  	position: relative;
+  	display: flex;
+  	width: 20em;
+  	height: 3em;
+  	line-height: 3;
+ 	background: red;
+  	overflow: hidden;
+  	border-radius: 0;
+}
+
+select {
+  	flex: 1;
+  	padding: 0 .5em;
+  	color: #c3bace;
+  	cursor: pointer;
+}
+
+/* Arrow */
+.select::after {
+  	content: '\25BC';
+  	position: absolute;
+  	top: 0;
+  	right: 0;
+  	padding: 0 1em;
+  	background: var(--bg-secondary);
+  	cursor: pointer;
+  	pointer-events: none;
+  	-webkit-transition: .25s all ease;
+  	-o-transition: .25s all ease;
+  	transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  	color: var(--text-link);
 }
