@@ -1,115 +1,104 @@
-## Welcome to DBD - API Documentation
+# Dracula for [GitHub Pages](https://pages.github.com/)
 
-You can easily use Queries in url to retrieve specific information.  
-ex: `https://dbd-api.herokuapp.com/perks?role=Survivor&lang=en`
+[![Build Status](https://travis-ci.org/dracula/gh-pages.svg?branch=master)](https://travis-ci.org/dracula/gh-pages)
 
-API available in English and French.  
-Choose language with query `lang=en` or `lang=fr`
+> A dark theme for [GitHub Pages](https://pages.github.com/), full preview at [preview the theme to see what it looks like](http://dracula.github.io/gh-pages/).
 
-### Get perks
-```php
-GET https://dbd-api.herokuapp.com/perks
-```
-```json
-[
-  {
-    "_id": "5f46d9afa3777022ec626077",
-    "role": "Survivor",
-    "name": "Meg Thomas",
-    "name_tag": "MT",
-    "perk_name": "Quick & Quiet",
-    "perk_tag": "QuickQuiet",
-    "description": "You do not make as much noise as others when quickly vaulting over obstacles or hiding in Lockers. The vault and hide actions' noise detection and audio range is reduced by 100 %. Quick & Quiet can only be triggered once every 30/25/20 seconds.",
-    "teach_level": 30,
-    "is_ptb": false,
-    "lang": "en",
-    "icon": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Perks/QuickQuiet.png"
-  },
-  {
-    "_id": "5f46d9afa3777022ec626078",
-    "role": "Survivor",
-    "name": "Meg Thomas",
-    "name_tag": "MT",
-    "perk_name": "Sprint Burst",
-    "perk_tag": "SprintBurst",
-    "description": "When starting to run, break into a sprint at 150 % of your normal running speed for a maximum of 3 seconds. Causes the Exhausted Status Effect for 60/50/40 seconds. Sprint Burst cannot be used while Exhausted. You do not recover from Exhaustion while running.",
-    "teach_level": 35,
-    "is_ptb": false,
-    "lang": "en",
-    "icon": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Perks/SprintBurst.png"
-  },
-  ...
- ]
+![Screenshot](./screenshot.png)
+
+## Install
+
+All instructions can be found at [draculatheme.com/github-pages](https://draculatheme.com/github-pages).
+
+## Customizing
+
+#### Configuration variables
+
+Dracula will respect the following variables, if set in your site's `_config.yml`:
+
+```yml
+title: [The title of your site]
+description: [A short description of your site's purpose]
 ```
 
-### Killers
-```php
-GET https://dbd-api.herokuapp.com/killers
-```
-```json
+Additionally, you may choose to set the following optional variables:
 
-  {
-    "_id": "5f4706f2a3777022ec6261b3",
-    "name": "Trapper",
-    "name_tag": "TR",
-    "full_name": "Evan MacMillan",
-    "alias": "Chuckles",
-    "gender": "Male",
-    "nationality": "American",
-    "realm": "The MacMillan Estate",
-    "power": "Bear Trap",
-    "weapon": "The Cleaver",
-    "speed": "115 % | 4.6 m/s",
-    "terror_radius": "32",
-    "height": "Tall",
-    "voice_actor": "Filip Ivanovic",
-    "difficulty": "Easy",
-    "overview": "The Trapper is an area-control Killer, able to apply pressure across the Map by placing deadly Bear Traps for Survivors to step into.His personal Perks, Unnerving Presence, Brutal Strength, and Agitation, allow him to chase and carry Survivors more effectively.He is focused on physical attributes and making use of his strength and the Survivors' fear.",
-    "lore": "Evan MacMillan idolised his father. It wasn't just that he was heir to a great fortune, it was the way he ran the estate. Raised under his firm hand, Evan had taken to running the workforce with an iron hand. Production was always high and the MacMillan Estate prospered under father and son.\n\nAs Archie MacMillan's mental health slowly disintegrated, Evan protected him from the herd who wanted a piece of the fortune. No matter what his father asked of him, Evan would do.\n\nWhen Archie MacMillan finally snapped, Evan became his enforcer in what would become known as the worst mass murder in modern history. They never proved that Evan lead over a hundred men into those dark tunnels before detonating the explosives and sealing them to their fate.The tale of the MacMillan Estate is a tale of wealth and power gone very wrong.\n\nHow many victims fell to the hands of father and son is unknown. No record is ever made of what became of Evan MacMillan. His father is another unsolved puzzle, found trapped in the locked basement of his own warehouse - starved and abandoned.",
-    "dlc": "Base Game",
-    "dlc_id": 381210,
-    "is_free": true,
-    "is_ptb": false,
-    "lang": "en",
-    "icon": {
-      "portrait": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Killers/Portrait/TR.png",
-      "preview_portrait": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Killers/PreviewPortrait/TR.png",
-      "shop_background": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Killers/ShopBG/TR.png"
-    }
-  },
-  ...
-]
+```yml
+show_downloads: ["true" or "false" to indicate whether to provide a download URL]
+google_analytics: [Your Google Analytics tracking ID]
+show_header: ["true" or "false" to indicate whether to show the top header]
 ```
 
-### Survivors
-```php
-GET https://dbd-api.herokuapp.com/survivors
+There are also currently the following optional page variables:
+```yml
+icon: [path to file including extension]
+colorspace: [primary page color cyan/green/orange/pink/purple/red/yellow]
 ```
-```json
-[
-  {
-    "_id": "5f46a992a3777022ec625f24",
-    "name": "Dwight Fairfield",
-    "full_name": null,
-    "name_tag": "DF",
-    "gender": "Male",
-    "role": "Nervous Leader",
-    "nationality": "American",
-    "voice_actor": "Ian Chuprun",
-    "overview": "Dwight Fairfield is a nervous Leader, able to locate his allies and increase their effectiveness.\r\n\r\nHis personal Perks, Bond, Prove Thyself, and Leader, allow him to get in proximity of other Survivors and provide bonuses to their actions as well as his own.\r\n\r\nHe is skilled at finding others and working as a group. His Perks help him and others by keeping them together and alive.",
-    "lore": "Dwight was geeky and scrawny through high school. He always wanted to be one of the cool kids, but somehow never had the charisma. He tried out for the football team but was cut, the basketball team didn't even take a look, and his grades were distinctly below average. One weekend, on a team-building exercise from his dead-end job, Dwight's boss led them deep into the woods before breaking out his family recipe moonshine. Dwight remembered taking the first sip before waking up late the next morning all alone. During the night, the others had abandoned him. Once again, the laughing stock of the community Dwight tried to hike his way out of the woods. That was the last anyone ever heard of Dwight Fairfield.\r\n\r\nDwight isn't the typical guy you think of when someone says \"Survivor\". He lacks that certain pizzazz and without his glasses, he's more or less blind. But as the sun sets and the woods come alive, Dwight clasps to his rat race life, making sure that he'll live to see another day even though something unimaginable is after him. Dwight won't stop. He'll survive no matter what. As others spent hours being seen in high school. He spent hours becoming invisible and avoiding danger. And it doesn't matter if it's dangers in the hallway or dangers in the woods. Survival is key. As other employees panic when terror infects them, Dwight makes use of his disturbing teen experience. The tables have now turned and now others need to follow to Dwight's firm directions if they are to survive as he knows how to disappear.",
-    "difficulty": "Easy",
-    "dlc": "Base Game",
-    "dlc_id": 381210,
-    "is_free": true,
-    "is_ptb": false,
-    "lang": "en",
-    "icon": {
-      "portrait": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Killers/Portrait/DF.png",
-      "preview_portrait": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Killers/PreviewPortrait/DF.png",
-      "shop_background": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Killers/ShopBG/DF.png"
-    }
-  },
-  ...
-]
-```
+
+#### Stylesheet
+
+If you'd like to add your own custom styles:
+
+1. Create a file called `/assets/css/style.scss` in your site
+2. Add the following content to the top of the file, exactly as shown:
+    ```scss
+    ---
+    ---
+
+    @import "{{ site.theme }}";
+    ```
+3. Add any custom CSS (or Sass, including imports) you'd like immediately after the `@import` line
+
+*Note: If you'd like to change the theme's Sass variables, you must set new values before the `@import` line in your stylesheet.*
+
+#### Layouts
+
+If you'd like to change the theme's HTML layout:
+
+1. [Copy the original template](https://github.com/dracula/gh-pages/blob/master/_layouts/default.html) from the theme's repository<br />(*Pro-tip: click "raw" to make copying easier*)
+2. Create a file called `/_layouts/default.html` in your site
+3. Paste the default layout content copied in the first step
+4. Customize the layout as you'd like
+
+#### Overriding GitHub-generated URLs
+
+Templates often rely on URLs supplied by GitHub such as links to your repository or links to download your project. If you'd like to override one or more default URLs:
+
+1. Look at [the template source](https://github.com/dracula/gh-pages/blob/master/_layouts/default.html) to determine the name of the variable. It will be in the form of `{{ site.github.zip_url }}`.
+2. Specify the URL that you'd like the template to use in your site's `_config.yml`. For example, if the variable was `site.github.url`, you'd add the following:
+    ```yml
+    github:
+      zip_url: http://example.com/download.zip
+      another_url: another value
+    ```
+3. When your site is built, Jekyll will use the URL you specified, rather than the default one provided by GitHub.
+
+*Note: You must remove the `site.` prefix, and each variable name (after the `github.`) should be indent with two space below `github:`.*
+
+For more information, see [the Jekyll variables documentation](https://jekyllrb.com/docs/variables/).
+
+#### Previewing the theme locally
+
+If you'd like to preview the theme locally (for example, in the process of proposing a change):
+
+1. Clone down the theme's repository (`git clone https://github.com/dracula/gh-pages`)
+2. `cd` into the theme's directory
+3. Run `script/bootstrap` to install the necessary dependencies
+4. Run `bundle exec jekyll serve` to start the preview server
+5. Visit [`localhost:4000`](http://localhost:4000) in your browser to preview the theme
+
+#### Running tests
+
+The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` one before the test script will work.
+
+## Team
+
+This theme is maintained by the following person(s) and a bunch of [awesome contributors](https://github.com/dracula/ghpages/graphs/contributors).
+
+[![backlands](https://avatars1.githubusercontent.com/u/12586299?v=3&s=70)](https://github.com/backlands) |
+--- |
+[backlands](https://github.com/backlands) |
+
+## License
+
+[MIT License](./LICENSE)
