@@ -25,78 +25,100 @@
 						With this API you can't get informations for Killer, survivors; Perks and more.
 						You can use query in URL if you search for a specific response.
 					</p>
-					
+
 					<h6><b>JUMP TO</b></h6>
 					<a class="btn btn-success" href="#perks">GET Perks</a>
 					<a class="btn btn-success" href="#killers">GET Killers</a>
 					<a class="btn btn-success" href="#survivors">GET Survivors</a>
 					<a class="btn btn-success" href="#currencies">GET Currencies</a>
 
-					<br><hr><br>
+					<br>
+					<hr><br>
 
 					<h3>Changing language</h3>
 					<p>
 						You can change language with the query <b>lang</b>
-						<br>French and English is actually available so you can use <pre><code class="jquery">English = API_URL + "?lang=en" 
+						<br>French and English is actually available so you can use
+						<pre><code class="jquery">English = API_URL + "?lang=en" 
  French = API_URL + "?lang=fr"</code></pre>
 					</p>
 
-					<br><hr><br>
+					<br>
+					<hr><br>
 
 					<h3>Images</h3>
 					<p>
-						All images is hosted on <a href="https://github.com/dearvoodoo/dbd" target="_blank">my github</a>
-						<br>You can simply use link directly in the API, or you can use perk_tag and name_tag to build image link.
+						All images is hosted on <a href="https://github.com/dearvoodoo/dbd" target="_blank">my
+							github</a>
+						<br>You can simply use link directly in the API, or you can use perk_tag and name_tag to build
+						image link.
+					</p>
 
 					<hr>
+
 					<h3 id="perks">Get perks</h3>
-					<p>Get list of perks or specific information with query.</p>
-					<pre><code class="language-http">curl -X GET 'https://dbd-api.herokuapp.com/perks'</code></pre>
-					<h5>Query</h5>
-					<table class="table table-striped table-dark">
-						<thead>
-							<tr>
-								<th scope="col">Champ</th>
-								<th scope="col">Type</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">id</th>
-								<td>Object</td>
-							</tr>
-							<tr>
-								<th scope="row">role</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">name</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">name_tag</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">perk_name</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">teach_level</th>
-								<td>Number</td>
-							</tr>
-							<tr>
-								<th scope="row">is_ptb</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">lang</th>
-								<td>String</td>
-							</tr>
-						</tbody>
-					</table>
-					<h5>Result</h5>
-					<pre><code class="language-json text-left">
+					<div class="bd-example">
+						<p>
+							<h4>
+								<span class="badge badge-success">GET</span>
+								<kbd>https://dbd-api.herokuapp.com/perks</kbd>
+								<a class="btn btn-primary collapsed" data-toggle="collapse" href="#querylist1"
+									role="button" aria-expanded="false" aria-controls="querylist1">
+									View Query List
+								</a>
+							</h4>
+						</p>
+						<div class="collapse" id="querylist1">
+							<div class="card card-body">
+								<table class="table table-striped table-dark">
+									<thead>
+										<tr>
+											<th scope="col">Champ</th>
+											<th scope="col">Type</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">id</th>
+											<td>Object</td>
+										</tr>
+										<tr>
+											<th scope="row">role</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">name</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">name_tag</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">perk_name</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">teach_level</th>
+											<td>Number</td>
+										</tr>
+										<tr>
+											<th scope="row">is_ptb</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">lang</th>
+											<td>String</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="bd-clipboard"><button type="button" class="btn-clipboard" title=""
+							data-original-title="Copy to clipboard">Copy</button></div>
+					<figure class="highlight">
+						<pre><code class="language-json" data-lang="json">
 [
 	{
 		"_id": "5f46d9afa3777022ec626077",
@@ -126,104 +148,122 @@
 	},
 	...
 ]
-				</code></pre>
-				<hr>
+					</code></pre>
+					</figure>
+
+					<hr>
+
 					<h3 id="killers">Get killers</h3>
-					<p>Get list of killers or specific information with query.</p>
-					<pre><code class="language-http">curl -X GET 'https://dbd-api.herokuapp.com/killers'</code></pre>
-					<h5>Query</h5>
-					<table class="table table-striped table-dark">
-						<thead>
-							<tr>
-								<th scope="col">Champ</th>
-								<th scope="col">Type</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">id</th>
-								<td>Object</td>
-							</tr>
-							<tr>
-								<th scope="row">name</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">full_name</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">alias</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">gender</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">nationality</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">realm</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">power</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">weapon</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">speed</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">terror_radius</th>
-								<td>Number</td>
-							</tr>
-							<tr>
-								<th scope="row">height</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">voice_actor</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">difficulty</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">dlc</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">dlc_id</th>
-								<td>Number</td>
-							</tr>
-							<tr>
-								<th scope="row">is_ptb</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">is_free</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">perks</th>
-								<td>Array</td>
-							</tr>
-							<tr>
-								<th scope="row">lang</th>
-								<td>String</td>
-							</tr>
-						</tbody>
-					</table>
-					<h5>Result</h5>
-					<pre><code class="language-json text-left">
+					<div class="bd-example">
+						<p>
+							<h4>
+								<span class="badge badge-success">GET</span>
+								<kbd>https://dbd-api.herokuapp.com/killers</kbd>
+								<a class="btn btn-primary collapsed" data-toggle="collapse" href="#querylist2"
+									role="button" aria-expanded="false" aria-controls="querylist2">
+									View Query List
+								</a>
+							</h4>
+						</p>
+						<div class="collapse" id="querylist2">
+							<div class="card card-body">
+								<table class="table table-striped table-dark">
+									<thead>
+										<tr>
+											<th scope="col">Champ</th>
+											<th scope="col">Type</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">id</th>
+											<td>Object</td>
+										</tr>
+										<tr>
+											<th scope="row">name</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">full_name</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">alias</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">gender</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">nationality</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">realm</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">power</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">weapon</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">speed</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">terror_radius</th>
+											<td>Number</td>
+										</tr>
+										<tr>
+											<th scope="row">height</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">voice_actor</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">difficulty</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">dlc</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">dlc_id</th>
+											<td>Number</td>
+										</tr>
+										<tr>
+											<th scope="row">is_ptb</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">is_free</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">perks</th>
+											<td>Array</td>
+										</tr>
+										<tr>
+											<th scope="row">lang</th>
+											<td>String</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="bd-clipboard"><button type="button" class="btn-clipboard" title=""
+							data-original-title="Copy to clipboard">Copy</button></div>
+					<figure class="highlight">
+						<pre><code class="language-json" data-lang="json">
 [
 	{
 		"_id": "5f4706f2a3777022ec6261b3",
@@ -261,76 +301,94 @@
 	},
 	...
 ]
-				</code></pre>
-				<hr>
+					</code></pre>
+					</figure>
+
+					<hr>
+
 					<h3 id="survivors">Get survivors</h3>
-					<p>Get list of survivors or specific information with query.</p>
-					<pre><code class="language-http">curl -X GET 'https://dbd-api.herokuapp.com/survivors'</code></pre>
-					<h5>Query</h5>
-					<table class="table table-striped table-dark">
-						<thead>
-							<tr>
-								<th scope="col">Champ</th>
-								<th scope="col">Type</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">id</th>
-								<td>Object</td>
-							</tr>
-							<tr>
-								<th scope="row">role</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">name</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">gender</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">nationality</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">voice_actor</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">difficulty</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">dlc</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">dlc_id</th>
-								<td>Number</td>
-							</tr>
-							<tr>
-								<th scope="row">is_ptb</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">is_free</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">perks</th>
-								<td>Array</td>
-							</tr>
-							<tr>
-								<th scope="row">lang</th>
-								<td>String</td>
-							</tr>
-						</tbody>
-					</table>
-					<h5>Result</h5>
-					<pre><code class="language-json text-left">
+					<div class="bd-example">
+						<p>
+							<h4>
+								<span class="badge badge-success">GET</span>
+								<kbd>https://dbd-api.herokuapp.com/survivors</kbd>
+								<a class="btn btn-primary collapsed" data-toggle="collapse" href="#querylist3"
+									role="button" aria-expanded="false" aria-controls="querylist3">
+									View Query List
+								</a>
+							</h4>
+						</p>
+						<div class="collapse" id="querylist3">
+							<div class="card card-body">
+								<table class="table table-striped table-dark">
+									<thead>
+										<tr>
+											<th scope="col">Champ</th>
+											<th scope="col">Type</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">id</th>
+											<td>Object</td>
+										</tr>
+										<tr>
+											<th scope="row">role</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">name</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">gender</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">nationality</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">voice_actor</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">difficulty</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">dlc</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">dlc_id</th>
+											<td>Number</td>
+										</tr>
+										<tr>
+											<th scope="row">is_ptb</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">is_free</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">perks</th>
+											<td>Array</td>
+										</tr>
+										<tr>
+											<th scope="row">lang</th>
+											<td>String</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="bd-clipboard"><button type="button" class="btn-clipboard" title=""
+							data-original-title="Copy to clipboard">Copy</button></div>
+					<figure class="highlight">
+						<pre><code class="language-json" data-lang="json">
 [
 	{
 		"_id": "5f46a992a3777022ec625f24",
@@ -362,84 +420,102 @@
 	},
 	...
 ]
-				</code></pre>
-				<hr>
+					</code></pre>
+					</figure>
+
+					<hr>
+
 					<h3 id="currencies">Get currencies</h3>
-					<p>Get list of currencies or specific information with query.</p>
-					<pre><code class="language-http">curl -X GET 'https://dbd-api.herokuapp.com/currencies'</code></pre>
-					<h5>Query</h5>
-					<table class="table table-striped table-dark">
-						<thead>
-							<tr>
-								<th scope="col">Champ</th>
-								<th scope="col">Type</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<th scope="row">_id</th>
-								<td>Object</td>
-							</tr>
-							<tr>
-								<th scope="row">auriccells</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">bloodpoints</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">iridescentshards</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">burntcoins</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">goldcoins</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">putridserum</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">riftfragments</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">summer18_killer</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">summer18_survivor</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">pack</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">event</th>
-								<td>Boolean</td>
-							</tr>
-							<tr>
-								<th scope="row">name</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">event_name</th>
-								<td>String</td>
-							</tr>
-							<tr>
-								<th scope="row">lang</th>
-								<td>String</td>
-							</tr>
-						</tbody>
-					</table>
-					<h5>Result</h5>
-					<pre><code class="language-json text-left">
+					<div class="bd-example">
+						<p>
+							<h4>
+								<span class="badge badge-success">GET</span>
+								<kbd>https://dbd-api.herokuapp.com/currencies</kbd>
+								<a class="btn btn-primary collapsed" data-toggle="collapse" href="#querylist4"
+									role="button" aria-expanded="false" aria-controls="querylist4">
+									View Query List
+								</a>
+							</h4>
+						</p>
+						<div class="collapse" id="querylist4">
+							<div class="card card-body">
+								<table class="table table-striped table-dark">
+									<thead>
+										<tr>
+											<th scope="col">Champ</th>
+											<th scope="col">Type</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">_id</th>
+											<td>Object</td>
+										</tr>
+										<tr>
+											<th scope="row">auriccells</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">bloodpoints</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">iridescentshards</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">burntcoins</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">goldcoins</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">putridserum</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">riftfragments</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">summer18_killer</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">summer18_survivor</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">pack</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">event</th>
+											<td>Boolean</td>
+										</tr>
+										<tr>
+											<th scope="row">name</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">event_name</th>
+											<td>String</td>
+										</tr>
+										<tr>
+											<th scope="row">lang</th>
+											<td>String</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="bd-clipboard"><button type="button" class="btn-clipboard" title=""
+							data-original-title="Copy to clipboard">Copy</button></div>
+					<figure class="highlight">
+						<pre><code class="language-json" data-lang="json">
 [
 	{
 		"_id": "5f4864b2d8bcfe3924564ba2",
@@ -475,16 +551,17 @@
 	},
 	...
 ]
-				</code></pre>
+					</code></pre>
+					</figure>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!-- partial -->
-	<script src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'></script>
-	<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
-	<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
-	<script src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js'></script>
-	<script src="js/script.js"></script>
+		<!-- partial -->
+		<script src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'></script>
+		<script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
+		<script src='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js'></script>
+		<script src='https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js'></script>
+		<script src="js/script.js"></script>
 
 </body>
 

@@ -235,3 +235,92 @@ select {
   background-color: var(--border-color);
   color: var(--bg-floating)
 }
+
+@media (min-width: 768px) {
+.bd-clipboard {
+    display: block;
+}}
+
+.bd-clipboard {
+  position: relative;
+  display: block;
+  float: right;
+}
+.btn-clipboard {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  z-index: 10;
+  display: block;
+  padding: .25rem .5rem;
+  font-size: 75%;
+  color: #818a91;
+  background-color: transparent;
+  border: 0;
+  border-radius: .25rem;
+}
+
+.btn-clipboard:hover {
+  color: var(--bg-secondary);
+  background-color: var(--border-color);
+}
+
+.bd-clipboard+.highlight {
+  margin-top: 0;
+}
+
+.highlight {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: var(--bg-secondary);
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+figure {
+  display: block;
+}
+
+.bd-example {
+  position: relative;
+  padding: 1.5rem;
+  margin: 1rem -15px 0;
+  border: solid var(--bg-secondary);
+  margin-right: 0;
+  margin-left: 0;
+  border-width: .2rem;
+}
+
+.hljs {
+  background: var(--bg-secondary);
+}
+
+.card {
+  background-color: #454d55;
+}
+
+::-webkit-scrollbar{
+  height: 4px;
+  width: 4px;
+  background: var(--bg-floating);
+}
+::-webkit-scrollbar-thumb:horizontal{
+  background: var(--bg-light);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background: var(--bg-light);
+  border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
