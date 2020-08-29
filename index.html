@@ -30,6 +30,7 @@
 					<a class="btn btn-success" href="#perks">GET Perks</a>
 					<a class="btn btn-success" href="#killers">GET Killers</a>
 					<a class="btn btn-success" href="#survivors">GET Survivors</a>
+					<a class="btn btn-success" href="#currencies">GET Currencies</a>
 
 					<br><hr><br>
 
@@ -358,6 +359,119 @@
 			"ProveThyself",
 			"Leader"
 		]
+	},
+	...
+]
+				</code></pre>
+				<hr>
+					<h3 id="currencies">Get currencies</h3>
+					<p>Get list of currencies or specific information with query.</p>
+					<pre><code class="language-http">curl -X GET 'https://dbd-api.herokuapp.com/currencies'</code></pre>
+					<h5>Query</h5>
+					<table class="table table-striped table-dark">
+						<thead>
+							<tr>
+								<th scope="col">Champ</th>
+								<th scope="col">Type</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">_id</th>
+								<td>Object</td>
+							</tr>
+							<tr>
+								<th scope="row">auriccells</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">bloodpoints</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">iridescentshards</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">burntcoins</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">goldcoins</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">putridserum</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">riftfragments</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">summer18_killer</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">summer18_survivor</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">pack</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">event</th>
+								<td>Boolean</td>
+							</tr>
+							<tr>
+								<th scope="row">name</th>
+								<td>String</td>
+							</tr>
+							<tr>
+								<th scope="row">event_name</th>
+								<td>String</td>
+							</tr>
+							<tr>
+								<th scope="row">lang</th>
+								<td>String</td>
+							</tr>
+						</tbody>
+					</table>
+					<h5>Result</h5>
+					<pre><code class="language-json text-left">
+[
+	{
+		"_id": "5f4864b2d8bcfe3924564ba2",
+		"auriccells": true,
+		"name": "Auric Cells",
+		"icon": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Currencies/auriccells.png",
+		"pack": false,
+		"event": false,
+		"lang": "en"
+	},
+	{
+		"_id": "5f4864b2d8bcfe3924564bab",
+		"auriccell": true,
+		"name": {
+			"pack_01": "500 Auric Cells",
+			"pack_02": "1100 Auric Cells includes +10 % Bonus",
+			"pack_03": "2250 Auric Cells includes +12.5 % Bonus",
+			"pack_04": "4025 Auric Cells includes +15 % Bonus",
+			"pack_05": "6000 Auric Cells includes +20 % Bonus",
+			"pack_06": "12500 Auric Cells includes +25 % Bonus"
+		},
+		"icon": {
+			"pack_01": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Currencies/auriccellpack_01.png",
+			"pack_02": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Currencies/auriccellpack_02.png",
+			"pack_03": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Currencies/auriccellpack_03.png",
+			"pack_04": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Currencies/auriccellpack_04.png",
+			"pack_05": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Currencies/auriccellpack_05.png",
+			"pack_06": "https://raw.githubusercontent.com/dearvoodoo/dbd/master/Currencies/auriccellpack_06.png"
+		},
+		"pack": true,
+		"event": false,
+		"lang": "en"
 	},
 	...
 ]
